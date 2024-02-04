@@ -8,3 +8,5 @@ CART_HOST: cart.app-dev.rakeshintech.online
 SHIPPING_HOST: shipping.app-dev.rakeshintech.online
 PAYMENT_HOST: payment.app-dev.rakeshintech.online
 DISPATCH_HOST: dispatch.app-dev.rakeshintech.online
+nexusURL: "{{ lookup('aws_ssm', '/robotshop/{{env}}/nexusurl', region='us-east-1', decrypt=True ) }}"
+group_id: com/robotshop
