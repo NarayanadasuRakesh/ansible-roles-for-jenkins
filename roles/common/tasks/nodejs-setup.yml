@@ -5,7 +5,9 @@
   ansible.builtin.package:
     name: nodejs
     state: present
-- name: Install dependencies
-  ansible.builtin.command: npm install
-  args:
-    chdir: /app
+
+# CI takes care of installing dependencies
+# - name: Install dependencies
+#   ansible.builtin.command: npm install
+#   args:
+#     chdir: /app
