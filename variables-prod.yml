@@ -8,3 +8,5 @@ CART_HOST: cart-prod.rakeshintech.online
 SHIPPING_HOST: shipping-prod.rakeshintech.online
 PAYMENT_HOST: payment-prod.rakeshintech.online
 DISPATCH_HOST: dispatch-prod.rakeshintech.online
+nexusURL: "{{ lookup('aws_ssm', '/roboshop/{{env}}/nexusurl', region='us-east-1', decrypt=True ) }}"
+group_id: com/roboshop
